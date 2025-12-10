@@ -14,3 +14,4 @@ dist/
 .idea/
 
 *.log
+config.json
