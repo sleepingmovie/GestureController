@@ -15,3 +15,5 @@ dist/
 
 *.log
 config.json
+
+mediapath.py
