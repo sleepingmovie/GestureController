@@ -9,6 +9,7 @@ from tkinter import simpledialog, messagebox, ttk
 from gesture_engine import GestureEngine
 from config_manager import ConfigManager
 from action_handler import ActionHandler
+import keyboard
 
 class Smoother:
     def __init__(self, alpha=0.5, start_val=0.0):
@@ -284,14 +285,14 @@ def main():
 
                 if not args.no_preview:
                     key = cv2.waitKey(1) & 0xFF
-                    if key == ord('s'):
+                    if keyboard.is_pressed('s'):
                         name, action = ui.prompt_save_gesture()
                         if name and action:
                             norm = engine.normalize_landmarks(hn.landmark)
                             config.save_gesture(name, norm, action)
-                    elif key == ord('l'):
+                    elif keyboard.is_pressed('l'):
                          ui.show_manager()
-                    elif key == ord('o'):
+                    elif keyboard.is_pressed('o'):
                         ui.show_settings(FRAME_REDUCTION)
 
         if detected_name and not is_dragging:

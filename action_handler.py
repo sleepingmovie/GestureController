@@ -54,8 +54,9 @@ class ActionHandler:
                 webbrowser.open(url)
             
             elif action_string.startswith("type:"):
+                pyautogui.FAILSAFE = False
                 text = action_string.split(":", 1)[1]
-                pyautogui.write(text)
+                pyautogui.write(text, interval=0.1)
 
             elif action_string.startswith("print:"):
                 msg = action_string.split(":", 1)[1]
