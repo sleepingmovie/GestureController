@@ -148,13 +148,13 @@ class MacroEditor(ModernUI):
         tk.Label(right_p, text="Добавить действие:", bg=BG_COLOR, fg=FG_COLOR, font=("Arial", 10, "bold")).pack(anchor="w")
         
         self.types = {
-            "Клавиши (Hotkey)": "hotkey",
-            "Запуск (Shell/App)": "shell",
-            "Текст (Type)": "type",
-            "Сайт (Web)": "web",
-            "Мышь (Mouse)": "mouse",
-            "Ждать (Wait ms)": "wait",
-            "Спец (Special)": "special"
+            "⌨ Клавиши (Hotkey)": "hotkey",
+            "🚀 Запуск (Shell/App)": "shell",
+            "✍ Текст (Type)": "type", 
+            "🌐 Сайт (Web)": "web",
+            "🖱 Мышь (Mouse)": "mouse", 
+            "⏳ Ждать (Wait ms)": "wait", 
+            "✨ Спец (Special)": "special" 
         }
         
         self.hints = {
